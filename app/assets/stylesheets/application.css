@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+.blockquote {
+  border-color: lightgray !important;
+  border: 0;
+  border-left: 5px;
+  border-style: solid;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+#answer {
+  background-color: rgb(237, 237, 168) !important;
+}

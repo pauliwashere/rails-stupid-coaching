@@ -1,0 +1,23 @@
+<h1>This is your coach</h1>
+
+<h4>Your question:</h4>
+<figure>
+  <blockquote class="blockquote">
+  <p><%=params[:question]%></p>
+ <figcaption class="blockquote-footer">You</figcaption>
+  </blockquote>
+</figure>
+
+<figure>
+  <blockquote class="blockquote" id="answer">
+    <% if params[:question] == "I am going to work" %>
+          <p><%= @answers[0] %></p>
+        <% elsif params[:question].include?("?") %>
+          <p><%= @answers[1] %></p>
+        <% else %>
+          <p><%= @answers[2] %></p>
+    <% end %>
+    <figcaption class="blockquote-footer">Coach</figcaption>
+  </blockquote>
+</figure>
+<p><p><%= link_to "Ask a new question", ask_path %></p>
